@@ -76,8 +76,8 @@ section {
     background-color: #f0dee9b5;
     margin: 20px 50px;
     padding: 20px 40px;
-    width: 370px;
-    height: 200px; /* Adjust height as needed */
+    width: 330px;
+    height: 170px; /* Adjust height as needed */
     transform: skew(-10deg); /* Skew for parallelogram effect */
     border: none; /* Remove default border */
 }
