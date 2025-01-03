@@ -121,12 +121,13 @@ body.dark-mode .SearchDarkMode {
 }
 
 .preview {
+
     display: flex;
-    align-items: center; /* Align the text and image properly */
-    padding: 10px 20px;
-    margin-top: 45px;
+    align-items: left; /* Align the text and image properly */
+   
+    margin-top: 30px;
     background-color: #0abbe8; /* Light blue background */
-    border-radius: 24px; /* Rounded corners */
+    border-radius: 28px; /* Rounded corners */
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: transform 0.2s ease-in-out;
     width: fit-content;
@@ -140,28 +141,24 @@ body.dark-mode .SearchDarkMode {
 .preview img {
     height: 30px;
     width: 30px;
-    margin-right: -5px; /* Spacing between the icon and text */
+    margin-right: 0px; /* Spacing between the icon and text */
     transition: all 0.2s ease-in-out;
 }
 
-.preview span {
-    font-size: 15px;
-    font-weight: 25;
-    color: #5b5b5b; /* Text color */
-}
+
 
 .source {
     display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    margin-top: 45px;
+    align-items: right;
+   
+    margin-top: 30px;
     margin-left: 20px; /* Add space between .preview and .source */
     background-color: #0abbe8; /* Light blue background */
-    border-radius: 24px; /* Rounded corners */
+    border-radius: 28px; /* Rounded corners */
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: transform 0.2s ease-in-out;
     width: fit-content;
-    float: left; /* Make sure both are floated left */
+    float: right; /* Make sure both are floated left */
 }
 
 .source:hover {
