@@ -1,0 +1,22 @@
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100%; /* Or adjust based on your content */
+        overflow: auto; /* Enable scrolling */
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    pointer-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; 
