@@ -1,190 +1,162 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+<!DOCTYPE html>
+<html lang="en">
 
-:root {
-    --primary: #f4eff0;
-    --secondary: #ff1b82;
-    --ternary: #1327ff;
-    --light: #f7f26c;
-    --dark: #f50414;
-}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css_files/commoncss.css">
+    <link rel="stylesheet" href="../css_files/search.css">
+    <link rel="stylesheet" href="../css_files/curstyle.css">
+    <script src="../js_files/hamburgerMenu.js"></script>
+    <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <title>WEB FORGE| Accordions</title>
+</head>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(white);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(152, 151, 151, 0.883);
-}
-
-body {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    line-height: 1.4;
-    margin: 4%;
-    font-size: 1.4rem;
-    background-image: url(../images/bg1.jpeg);
-    background-repeat: no repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-section {
-    z-index: 100;
-}
-
-.heading {
-    font-size: 4em;
-    font-weight: bolder;
-    color: white;
-    text-align: center;
-    margin: 75px 0 80px;
-    text-shadow: 2px 2px 2px black, 1px 1px 1px white;
-}
-
-.contain {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 32px;
-}
-
-.box {
-    box-sizing: border-box;
-    position: relative; /* For positioning pseudo-elements */
-    display: inline-block; /* To work with float */
-    float: left; /* Align the box to the left */
-    color: black;
-    background-color: #f0dee9b5;
-    margin: 20px 50px;
-    padding: 20px 40px;
-    width: 370px;
-    height: 200px; /* Adjust height as needed */
-    transform: skew(-10deg); /* Skew for parallelogram effect */
-    border: none; /* Remove default border */
-}
-
-/* Add colored borders to corners */
-.box::before, 
-.box::after {
-    content: '';
-    position: absolute;
-    width: 30px; /* Adjust width of corner borders */
-    height: 30px; /* Adjust height of corner borders */
-    background: linear-gradient(45deg, red, blue); /* Multicolor gradient */
-    z-index: 1;
-}
-
-/* Top-left corner */
-.box::before {
-    top: 0;
-    left: 0;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-}
-
-/* Bottom-right corner */
-.box::after {
-    bottom: 0;
-    right: 0;
-    clip-path: polygon(100% 100%, 0 100%, 100% 0);
-}
+<body>
+    <pointer-particles></pointer-particles>
 
 
+    <header class="header3">
+        <nav class="navbar">
+            <a href="../../index.html">
+                <div class="flex-container">
+                    <div class="flex-item-left"><img src="../images/logo.png" width="37px" height="37px"></div>
+                    <div class="flex-item-right" class="logo">WEB FORGE</div>
+                </div>
+            </a>
 
-h1 {
-    color: black;
-    text-align: center;
-    text-shadow: 1px 1px 1px black, 1px 1px 1px white;
-    font-size: 1.8em;
-}
+         
+            <button id="dark-mode-toggle"></button>
+          
+        </nav>
+    </header>
 
-body.dark-mode .SearchDarkMode {
-    color: #FFFFFF;
-}
+    <section>
+        <pointer-particles></pointer-particles>
+        <div class="heading">Accordions</div>
+        <!-- Search Bar -->
+        <div id="searchBar">
+            <h1 class="SearchDarkMode">Search Accordion</h1><br>
+            <input type="text" id="componentSearch" placeholder="Enter Accordion Name" oninput="filtereachComponents()">
+        </div>
 
-.preview {
+        <div class="no-results">
+            <img src="../images/no-results.png" alt="" height="100px" width="100px">
+            <h2>Hmmm, we are not getting any result. <br> Our bad - Please try another search!</h2>
+        </div>
 
-    display: flex;
-    align-items: left; /* Align the text and image properly */
-    padding: 10px 15px;
-    margin-top: 30px;
-    background-color: #0abbe8; /* Light blue background */
-    border-radius: 28px; /* Rounded corners */
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.2s ease-in-out;
-    width: fit-content;
-    float: left;
-}
+        <div class="contain">
+            <div class="box">
+                <h1>3D Accordion</h1>
+                <div class="preview">
+                    <a href="../../Components/Accordions/3D-Accordion/index.html" title="Live Preview" target="_blank">
+                        <img src="../images/link.png"> preview
+                    </a>
+                </div>
+                <div class="source">
+                    <a href="https://github.com/sankhe24/3D-Accordion.git" title="Source Code" target="_blank">
+                        <img src="../images/github.png">source code
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>Glassmorphism Accordion</h1>
+                <div class="preview">
+                    <a href="../../Components/Accordions/Glassmorphism-Accordion/index.html" title="Live Preview" target="_blank">
+                        <img src="../images/link.png"> preview
+                    </a>
+                </div>
+                <div class="source">
+                    <a href="https://github.com/sankhe24/Glassmorphism-Accordion.git" title="Source Code" target="_blank">
+                        <img src="../images/github.png">source code
+                    </a>
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>Horizontal Picture Accordion</h1>
+                <div class="preview">
+                    <a href="../../Components/Accordions/Horizontal-Picture-Accordion/index.html" title="Live Preview" target="_blank">
+                        <img src="../images/link.png">preview
+                    </a>
+                </div>
+                <div class="source">
+                    <a href="https://github.com/sankhe24/Horizontal-Picture-Accordion.git" title="Source Code" target="_blank">
+                        <img src="../images/github.png">source code
+                    </a>
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>Modern Accordion</h1>
+                <div class="preview">
+                    <a href="../../Components/Accordions/Modern-Accordion/index.html" title="Live Preview" target="_blank">
+                        <img src="../images/link.png"><span>preview</span>
+                    </a>
+                </div>
+                <div class="source">
+                    <a href="https://github.com/sankhe24/Modern-Accordion.git" title="Source Code" target="_blank">
+                        <img src="../images/github.png">source code
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>Neumorphism Accordion</h1>
+                <div class="preview">
+                    <a href="../../Components/Accordions/Neumorphism-Accordion/index.html" title="Live Preview" target="_blank">
+                        <img src="../images/link.png">preview
+                    </a>
+                </div>
+                <div class="source">
+                    <a href="https://github.com/sankhe24/Neumorphism-Accordion.git" title="Source Code" target="_blank">
+                        <img src="../images/github.png">source code
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>Simple Accordion</h1>
+                <div class="preview">
+                    <a href="../../Components/Accordions/Simple-Accordion/index.html" title="Live Preview" target="_blank">
+                        <img src="../images/link.png">preview
+                    </a>
+                </div>
+                <div class="source">
+                    <a href="https://github.com/sankhe24/Simple-Accordion.git" title="Source Code" target="_blank">
+                        <img src="../images/github.png">source code
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>Tilted Accordion</h1>
+                <div class="preview">
+                    <a href="../../Components/Accordions/Tilted-Accordion/index.html" title="Live Preview" target="_blank">
+                        <img src="../images/link.png">preview
+                    </a>
+                </div>
+                <div class="source">
+                    <a href="https://github.com/sankhe24/Tilted-Accordion.git" title="Source Code" target="_blank">
+                        <img src="../images/github.png">source code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.preview:hover {
-    transform: scale(1.50); /* Slight zoom effect on hover */
-}
+    <!-- Scroll To Top Button -->
+    <div id="progress">
+        <span id="progress-value" class="bi bi-arrow-up-short"></span>
+    </div>
 
-.preview img {
-    height: 30px;
-    width: 30px;
-    margin-right: 0px; /* Spacing between the icon and text */
-    transition: all 0.2s ease-in-out;
-}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../script.js"></script>
+    <script src="../js_files/curscript.js"></script>
+    <script src="../js_files/search.js"></script>
+    <script src="../js_files/dark-mode.js"></script>
+</body>
 
-
-
-.source {
-    display: flex;
-    align-items: right;
-    padding: 10px 15px;
-    margin-top: 30px;
-    margin-left: 20px; /* Add space between .preview and .source */
-    background-color: #0abbe8; /* Light blue background */
-    border-radius: 28px; /* Rounded corners */
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.2s ease-in-out;
-    width: fit-content;
-    float: right; /* Make sure both are floated left */
-}
-
-.source:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-.source img {
-    height: 30px;
-    width: 30px;
-    margin-left: -5px; /* Spacing between the icon and text */
-    transition: all 0.2s ease-in-out;
-}
-
-.source span {
-    font-size: 15px;
-    font-weight: 25;
-    color: #5b5b5b; /* Text color */
-}
-
-
-.source img:hover {
-    transform: scale(1.2);
-    transition: all 0.2s ease-in-out;
-}
-
-.preview img:hover {
-    transform: scale(1.2);
-    transition: all 0.2s ease-in-out;
-}
+</html>
